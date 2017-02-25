@@ -33,6 +33,7 @@
             this.devicesCombo = new System.Windows.Forms.ComboBox();
             this.refreshButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nfcCheck = new System.Windows.Forms.CheckBox();
             this.alarmCheck = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.clockCombo = new System.Windows.Forms.ComboBox();
@@ -94,6 +95,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nfcCheck);
             this.groupBox1.Controls.Add(this.alarmCheck);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.clockCombo);
@@ -113,10 +115,22 @@
             this.groupBox1.Controls.Add(this.rotateCheck);
             this.groupBox1.Location = new System.Drawing.Point(16, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(206, 413);
+            this.groupBox1.Size = new System.Drawing.Size(206, 434);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Status Bar";
+            // 
+            // nfcCheck
+            // 
+            this.nfcCheck.AutoSize = true;
+            this.nfcCheck.Enabled = false;
+            this.nfcCheck.Location = new System.Drawing.Point(6, 410);
+            this.nfcCheck.Name = "nfcCheck";
+            this.nfcCheck.Size = new System.Drawing.Size(100, 17);
+            this.nfcCheck.TabIndex = 17;
+            this.nfcCheck.Text = "NFC (Samsung)";
+            this.nfcCheck.UseVisualStyleBackColor = true;
+            this.nfcCheck.CheckedChanged += new System.EventHandler(this.statusBarCheck_CheckedChanged);
             // 
             // alarmCheck
             // 
@@ -380,7 +394,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(306, 444);
+            this.label4.Location = new System.Drawing.Point(306, 466);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 13);
             this.label4.TabIndex = 6;
@@ -389,16 +403,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(380, 430);
+            this.label5.Location = new System.Drawing.Point(380, 453);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Version 1.0";
+            this.label5.Text = "Version 1.1";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(281, 458);
+            this.label6.Location = new System.Drawing.Point(281, 479);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(159, 13);
             this.label6.TabIndex = 8;
@@ -406,7 +420,7 @@
             // 
             // Main
             // 
-            this.ClientSize = new System.Drawing.Size(452, 485);
+            this.ClientSize = new System.Drawing.Size(452, 507);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -464,6 +478,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox nfcCheck;
     }
 }
 
